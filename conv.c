@@ -55,7 +55,20 @@ int main()
     //setting the y 0 index
     int y_zero_inx= x_zero_inx + h_zero_inx;
     convolution(x,SizeX,h,SizeH,y);
-    
+    printf("y length: %d\n", SizeY);
+    printf("y: ");
+    for (int n = 0; n < SizeY; n++)
+    {
+        printf("%d", y[n]);
+        if (n < SizeY - 1) printf(" ");
+    }
+    printf("\n");
+
+    printf("x_zero_index: %d\n", x_zero_inx);
+    printf("h_zero_index: %d\n", h_zero_inx);
+    printf("y_zero_index: %d\n", y_zero_inx);
+
+
 
     return 0;
 }
