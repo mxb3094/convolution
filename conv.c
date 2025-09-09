@@ -1,7 +1,15 @@
 #include <stdio.h>
 int convolution (int *x, int SizeX,int *h,int SizeH, long long *y)
 {
- int SizeY=SizeX+SizeH-1;
+    //setting size of y
+    int SizeY=SizeX+SizeH-1;
+ //impementing the convlolution with 2 nested for loops
+    for(int n=0;n<SizeY<n++)
+    {
+        y(n)=0;
+        int StartK=0;
+        for(k=)
+    }
 
 }
 
@@ -16,6 +24,7 @@ int main()
     //change to the 0 index in both arrays
     int x_zero_inx=0;
     int h_zero_inx=0;
-
+    //setting the y 0 index
+    int y_zero_inx= x_zero_inx + h_zero_inx;
     return 0;
 }
