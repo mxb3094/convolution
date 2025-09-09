@@ -6,8 +6,11 @@
 
 int main()
 {
-
-
+    int SizeX=0,SizeH=0;
+    //initialize test arrays
+    int x[]={1,1,2,3,3,4,3,2,-1};
+    int h[]={-2,-1,3,5,6,4,2};
+    printf(sizeof(x[0]));
 
     return 0;
 }
