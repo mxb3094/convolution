@@ -4,21 +4,21 @@ int convolution (int *x, int SizeX,int *h,int SizeH, int *y)
     //setting size of y
     int SizeY=SizeX+SizeH-1;
  //impementing the convlolution with 2 nested for loops
-    for(int n=0;n<SizeY<n++)
+    for(int n=0;n<SizeY;n++)
     {
         y[n]=0;
         int StartK=0;
         //check that both arrays are within bounds
         if(n-(SizeH-1)>0)
         {
-            StartK=n-(StartH-1);
+            StartK=n-(SizeH-1);
         }
-        int EndK-n;
+        int EndK=n;
         if(n>SizeX-1)
         {
             EndK=SizeX-1;
         }
-        for(k=StartK;k<= EndK;k++)
+        for(int k=StartK;k<= EndK;k++)
         {
             y[n]=y[n]+x[k]*h[n-k];
         }
@@ -29,7 +29,7 @@ int convolution (int *x, int SizeX,int *h,int SizeH, int *y)
 int main()
 {
     int SizeX=0,SizeH=0;
-    int SizeY=SizeX+SizeH-1;
+    //int SizeY=SizeX+SizeH-1;
 
     //initialize test arrays
     int x[]={1,1,2,3,3,4,3,2,-1};
@@ -46,12 +46,13 @@ int main()
     
     
     */
-    SizeX=(sizeof(x)/sizeof(x[0])+1);
-    SizeH=(sizeof(h)/sizeof(h[0])+1);
+    SizeX=(sizeof(x)/sizeof(x[0]));
+    SizeH=(sizeof(h)/sizeof(h[0]));
+    int SizeY=SizeX+SizeH-1;
     int y[SizeY];
     //change to the 0 index in both arrays
-    int x_zero_inx=0;
-    int h_zero_inx=0;
+    int x_zero_inx=2;
+    int h_zero_inx=3;
     //setting the y 0 index
     int y_zero_inx= x_zero_inx + h_zero_inx;
     convolution(x,SizeX,h,SizeH,y);
